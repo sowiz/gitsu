@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Author:       sowiz
+# Description:  Easily change git user.
+#               Replace the examples with your git users.
+
+USER=${1:-null}
+
+if [ $USER = "john" ]; then
+    git config --global user.name johndoe
+    git config --global user.email johndoe@example.com
+elif [ $USER = "jane" ]; then
+    git config --global user.name janedoe
+    git config --global user.email janedoe@example.com
+fi
+
+git config --global user.name
+git config --global user.email
